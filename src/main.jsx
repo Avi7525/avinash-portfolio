@@ -61,6 +61,20 @@ const portfolio = {
       end: "2027",
       detail: "Currently pursuing",
     },
+    {
+      
+      college: "Aditya junior college",
+      start: "2021",
+      end: "2023",
+      detail: "Completed",
+    },
+    {
+     
+      college: "Sri Chaitanya Techno School",
+      start: "2020",
+      end: "2021",
+      detail: "Completed",
+    },
   ],
 
   skills: {
@@ -216,7 +230,7 @@ function App() {
       4. Replace the three values below.
     */
     const SERVICE_ID = "avinash@2006";
-    const TEMPLATE_ID = "o8qipyb";
+    const TEMPLATE_ID = "template_b4cj0xf";
     const PUBLIC_KEY = "MbnL0MthmltHmEMaF";
 
     if (
