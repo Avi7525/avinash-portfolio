@@ -69,7 +69,7 @@ const portfolio = {
       end: "2023",
       detail: "Completed",
     },
-    
+
     {
       Course: "SSC",
       college: "aditya junior college",
@@ -100,7 +100,7 @@ const portfolio = {
 
   certifications: [
     "Deloitte Data Analytics Virtual Experience Program — Forage",
-
+    "Complete Web Development Course — Udemy",
   ],
 
   achievements: [
