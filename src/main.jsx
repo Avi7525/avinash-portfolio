@@ -61,18 +61,20 @@ const portfolio = {
       end: "2027",
       detail: "Currently pursuing",
     },
+
     {
-      
-      college: "Aditya junior college",
+      Course: "MPC",
+      college: "aditya junior college",
       start: "2021",
       end: "2023",
       detail: "Completed",
     },
+    
     {
-     
-      college: "Sri Chaitanya Techno School",
-      start: "2020",
-      end: "2021",
+      Course: "SSC",
+      college: "aditya junior college",
+      start: "2021",
+      end: "2020",
       detail: "Completed",
     },
   ],
