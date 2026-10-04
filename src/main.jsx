@@ -215,9 +215,9 @@ function App() {
          {{name}}, {{email}}, {{subject}}, {{message}}
       4. Replace the three values below.
     */
-    const SERVICE_ID = "YOUR_SERVICE_ID";
-    const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-    const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+    const SERVICE_ID = "avinash@2006";
+    const TEMPLATE_ID = "o8qipyb";
+    const PUBLIC_KEY = "MbnL0MthmltHmEMaF";
 
     if (
       SERVICE_ID.startsWith("YOUR_") ||
