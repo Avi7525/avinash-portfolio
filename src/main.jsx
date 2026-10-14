@@ -23,11 +23,7 @@ import {
 import "./styles.css";
 
 /*
-  ============================================================
-  EDIT YOUR PORTFOLIO HERE
-  ============================================================
-  Most content is stored in the portfolio object below.
-  Replace the placeholder values whenever you are ready.
+ My Information
 */
 
 const portfolio = {
@@ -72,7 +68,7 @@ const portfolio = {
 
     {
       Course: "SSC",
-      college: "aditya junior college",
+      college: "Sri Chaitanya Techno School",
       start: "2021",
       end: "2020",
       detail: "Completed",
