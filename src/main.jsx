@@ -95,8 +95,46 @@ const portfolio = {
   ],
 
   certifications: [
-    "Deloitte Data Analytics Virtual Experience Program — Forage",
-    "Complete Web Development Course — Udemy",
+    {
+      title: "Full Stack Development Internship",
+      organization: "Thiranex",
+      date: "21 May 2026 – 20 June 2026",
+      description: "Successfully completed an internship in Full Stack Development.",
+      image: "/certificates/thiranex-full-stack.jpg",
+      certificateFile: "/certificates/thiranex-full-stack.jpg",
+      linkedinPost: "ADD_THIRANEX_LINKEDIN_POST_URL",
+      type: "Internship",
+    },
+    {
+      title: "Node.js Course Completion",
+      organization: "Unstop",
+      date: "Certificate of Completion",
+      description: "Successfully completed the Node JS course provided by Unstop.",
+      image: "/certificates/unstop-nodejs-preview.png",
+      certificateFile: "/certificates/unstop-nodejs.pdf",
+      linkedinPost: "ADD_UNSTOP_LINKEDIN_POST_URL",
+      type: "Course Certificate",
+    },
+    {
+      title: "Deloitte Data Analytics Virtual Experience Program",
+      organization: "Forage",
+      date: "2025",
+      description: "Completed a virtual experience program in data analytics.",
+      image: null,
+      certificateFile: null,
+      linkedinPost: "ADD_DELOITTE_LINKEDIN_POST_URL",
+      type: "Virtual Experience",
+    },
+    {
+      title: "Complete Web Development Course",
+      organization: "Udemy",
+      date: "2026",
+      description: "Completed a web development course.",
+      image: null,
+      certificateFile: null,
+      linkedinPost: "ADD_UDEMY_LINKEDIN_POST_URL",
+      type: "Course Certificate",
+    },
   ],
 
   achievements: [
@@ -107,6 +145,7 @@ const portfolio = {
   projects: [
     {
       name: "Spam Email Detection",
+      background: "/project-backgrounds/spam-detection.svg",
       description:
         "An AI-powered spam message and email classification project using text preprocessing and machine learning to identify spam content.",
       technologies: [
@@ -123,6 +162,7 @@ const portfolio = {
     },
     {
       name: "Hospital Load & Appointment Optimization",
+      background: "/project-backgrounds/hospital-appointments.svg",
       description:
         "A project concept for improving hospital appointment scheduling and balancing patient load. Add your final project description and implementation details here.",
       technologies: ["Add technology", "Add technology", "Add technology"],
@@ -457,7 +497,11 @@ function App() {
           />
           <div className="projects-grid">
             {portfolio.projects.map((project, index) => (
-              <article className="project-card glass-card" key={`${project.name}-${index}`}>
+              <article
+                className="project-card glass-card"
+                key={`${project.name}-${index}`}
+                style={{ "--project-image": `url(${project.background})` }}
+              >
                 <div className="project-number">0{index + 1}</div>
                 <div className="project-content">
                   <h3>{project.name}</h3>
@@ -516,12 +560,42 @@ function App() {
             title="Certifications"
             icon={<Sparkles size={22} />}
           />
-          <div className="simple-list-grid">
+          <div className="certificates-grid">
             {portfolio.certifications.map((item, index) => (
-              <div className="simple-list-card glass-card" key={index}>
-                <span>0{index + 1}</span>
-                <p>{item}</p>
-              </div>
+              <article className="certificate-card glass-card" key={item.title}>
+                {item.image ? (
+                  <a
+                    className="certificate-preview"
+                    href={item.certificateFile}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Preview ${item.title} certificate`}
+                  >
+                    <img src={item.image} alt={`${item.title} certificate`} loading="lazy" />
+                    <span className="certificate-preview-label">Certificate preview</span>
+                  </a>
+                ) : (
+                  <div className="certificate-placeholder" aria-hidden="true">
+                    <Sparkles size={32} />
+                    <span>{item.type}</span>
+                  </div>
+                )}
+                <div className="certificate-card-content">
+                  <span className="certificate-type">{item.type}</span>
+                  <h3>{item.title}</h3>
+                  <p className="certificate-organization">{item.organization}</p>
+                  <p className="certificate-date">{item.date}</p>
+                  <p className="certificate-description">{item.description}</p>
+                  <a
+                    className="certificate-link"
+                    href={item.linkedinPost.startsWith("https://www.linkedin.com/") ? item.linkedinPost : portfolio.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Certificate <ExternalLink size={15} />
+                  </a>
+                </div>
+              </article>
             ))}
           </div>
         </section>
