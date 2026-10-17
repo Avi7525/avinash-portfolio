@@ -1,0 +1,11 @@
+LinkedIn certificate links
+
+Open src/main.jsx and replace these placeholder values in portfolio.certifications:
+- ADD_THIRANEX_LINKEDIN_POST_URL
+- ADD_UNSTOP_LINKEDIN_POST_URL
+- ADD_DELOITTE_LINKEDIN_POST_URL
+- ADD_UDEMY_LINKEDIN_POST_URL
+
+Use the full URL of each LinkedIn post (https://www.linkedin.com/posts/...).
+Until a post URL is added, the View Certificate button opens your LinkedIn profile.
+The Thiranex certificate image and Unstop certificate PDF/preview are in public/certificates/.
